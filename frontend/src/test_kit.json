@@ -1,0 +1,116 @@
+{
+  "pageLayout": [
+    "1",
+    "2"
+  ],
+  "pages": {
+    "1": {"title": "P1", "sections": ["1", "2"]},
+    "2": {"title": "P2", "sections": ["2"]}
+  },
+  "sections": {
+    "1": {
+      "title": "title",
+      "description": "description",
+      "products": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "2": {
+      "title": "title 2",
+      "description": "description 2",
+      "products": [
+        "3",
+        "1",
+        "3"
+      ]
+    }
+  },
+  "products": {
+    "1": {
+      "title": "Bulletproof Brain Octane",
+      "link": "https://www.amazon.com/Bulletproof-Octane-Reliable-Source-Ketogenic/dp/B00P8E0QQG/ref=as_li_ss_tl?dchild=1&keywords=bulletproof+mct&qid=1600208360&sr=8-5&linkCode=ll1&tag=ketostarterki-20&linkId=068d91961eda444d025690a933044741&language=en_US",
+      "images": [
+        "baconCookerImage",
+        "bigBaconCookerImage",
+        "mctOilImage"
+      ],
+      "price": 3.99,
+      "descriptions": [
+        {
+          "text": "Morem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+          "sentiment": "good"
+        },
+        {
+          "text": "Mmucius option",
+          "sentiment": "good"
+        },
+        {
+          "text": "MQuo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+          "sentiment": "bad"
+        },
+        {
+          "text": "Mutat sensibus vim ex",
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    "2": {
+      "title": "Onnit MCT Oil",
+      "link": "https://ebay.com",
+      "images": [
+        "baconCookerImage",
+        "bigBaconCookerImage",
+        "mctOilImage"
+      ],
+      "price": 10.2,
+      "descriptions": [
+        {
+          "text": "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+          "sentiment": "good"
+        },
+        {
+          "text": "mucius option",
+          "sentiment": "good"
+        },
+        {
+          "text": "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+          "sentiment": "bad"
+        },
+        {
+          "text": "Mutat sensibus vim ex",
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    "3": {
+      "title": "Bacon Cooker",
+      "link": "https://google.com",
+      "images": [
+        "baconCookerImage",
+        "bigBaconCookerImage",
+        "mctOilImage"
+      ],
+      "price": 120.25,
+      "descriptions": [
+        {
+          "text": "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+          "sentiment": "good"
+        },
+        {
+          "text": "mucius option",
+          "sentiment": "good"
+        },
+        {
+          "text": "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+          "sentiment": "bad"
+        },
+        {
+          "text": "Mutat sensibus vim ex",
+          "sentiment": "neutral"
+        }
+      ]
+    }
+  }
+}

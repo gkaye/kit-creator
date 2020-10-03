@@ -1,0 +1,109 @@
+@import "antd.css";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#about-button {
+  opacity: 0.5;
+}
+#about-button:hover {
+  opacity: 1;
+}
+
+#logo {
+  opacity: 0.8;
+}
+#logo:hover {
+  opacity: 1;
+}
+
+.add-to-cart-button, .add-to-cart-button:hover, .add-to-cart-button:focus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0px 0px 1px 0px;
+  font-size: 13px;
+  width: 110px;
+  height: 23px;
+  background-color: #FFD814;
+  border-color: #D5D9D9;
+  color: #000000;
+  border-radius: 20px;
+  border-width: 1px;
+  box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+}
+
+.add-to-cart-button:hover {
+  background-color: #F7CA00;
+  border-color: #F2C200;
+}
+
+.remove-from-cart-button, .remove-from-cart-button:hover, .remove-from-cart-button:focus {
+  margin-left: 10px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.remove-from-cart-button:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.quantity-button, .quantity-button:hover, .quantity-button:focus {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0px 7px 1px 8px;
+  font-size: 10px;
+  width: 55px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-color: #D5D9D9;
+  color: #000000;
+  border-radius: 20px 20px 20px 20px;
+  border-width: 1px;
+  /*box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);*/
+}
+
+.quantity-button:hover {
+  background-color: #F7CA00;
+  border-color: #F2C200;
+}
