@@ -32,7 +32,11 @@ export const templateSlice = createSlice({
         title: "Bulletproof Brain Octane",
         link:
           "https://www.amazon.com/Bulletproof-Octane-Reliable-Source-Ketogenic/dp/B00P8E0QQG/ref=as_li_ss_tl?dchild=1&keywords=bulletproof+mct&qid=1600208360&sr=8-5&linkCode=ll1&tag=ketostarterki-20&linkId=068d91961eda444d025690a933044741&language=en_US",
-        images: ["baconCookerImage", "bigBaconCookerImage", "mctOilImage"],
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/814SQGpRwpL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/61dmd3M5XcL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
         price: 3.99,
         descriptions: [
           {
@@ -58,7 +62,11 @@ export const templateSlice = createSlice({
       2: {
         title: "Onnit MCT Oil",
         link: "https://ebay.com",
-        images: ["baconCookerImage", "bigBaconCookerImage", "mctOilImage"],
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/61NiTMP4jPL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/61NiTMP4jPL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/21014F31HBL._AC_.jpg",
+        ],
         price: 10.2,
         descriptions: [
           {
@@ -84,22 +92,28 @@ export const templateSlice = createSlice({
       3: {
         title: "Bacon Cooker",
         link: "https://google.com",
-        images: ["baconCookerImage", "bigBaconCookerImage", "mctOilImage"],
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
         price: 120.25,
         descriptions: [
           {
             text:
               "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
-            sentiment: "good",
+            sentiment: "neutral",
           },
           {
             text: "mucius option",
-            sentiment: "good",
+            sentiment: "neutral",
           },
           {
             text:
               "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
-            sentiment: "bad",
+            sentiment: "neutral",
           },
           {
             text: "Mutat sensibus vim ex",

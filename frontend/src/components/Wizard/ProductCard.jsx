@@ -73,7 +73,9 @@ const ProductCard = ({ productId, maxQuantity }) => {
     quantityOptions.push(i);
   }
 
-  const carouselWidth = "93px";
+  const carouselHeight = "93px";
+  const carouselWidth = "116px";
+
   return (
     <div
       style={{
@@ -89,7 +91,7 @@ const ProductCard = ({ productId, maxQuantity }) => {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginRight: "20px",
+                marginRight: "10px",
               }}
             >
               <Carousel
@@ -116,7 +118,7 @@ const ProductCard = ({ productId, maxQuantity }) => {
                         display: "flex",
                         alignContent: "center",
                         justifyContent: "center",
-                        height: carouselWidth,
+                        height: carouselHeight,
                         width: carouselWidth,
                       }}
                     >
@@ -126,7 +128,8 @@ const ProductCard = ({ productId, maxQuantity }) => {
                         style={{
                           width: carouselWidth,
                           objectFit: "contain",
-                          paddingBottom: "10px",
+                          paddingTop: "6px",
+                          paddingBottom: "4px",
                           userSelect: "none",
                         }}
                       />
