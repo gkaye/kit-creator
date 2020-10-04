@@ -1,0 +1,41 @@
+{
+  "name": "kit-creator",
+  "version": "1.0.0",
+  "description": "The kitcreator backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkaye/kit-creator.git"
+  },
+  "keywords": [
+    "Gregory",
+    "Kaye",
+    "James",
+    "Guan",
+    "kit",
+    "creator"
+  ],
+  "author": "Gregory Kaye",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/gkaye/kit-creator/issues"
+  },
+  "homepage": "https://github.com/gkaye/kit-creator#readme",
+  "private": true,
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "apollo-server": "^2.18.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "mongoose": "^5.10.7",
+    "parse-server": "^4.3.0"
+  }
+}
