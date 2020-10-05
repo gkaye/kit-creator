@@ -26,6 +26,8 @@ import Ratings from "./Ratings";
 import Descriptions from "./Descriptions";
 import { productSelector } from "../../state/templateReducer";
 
+import "../../App.css";
+
 const CarouselButton = ({ currentSlide, slideCount, icon, ...props }) => (
   <div {...props}>{icon}</div>
 );
@@ -38,21 +40,11 @@ CarouselButton.propTypes = {
 
 CarouselButton.defaultProps = { currentSlide: 0, slideCount: 0 };
 
-const cardStyle = {
-  width: "400px",
-  margin: "5px",
-  padding: "12px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignContent: "center",
-  alignItems: "center",
-  borderTop: "solid",
-  borderTopColor: "rgba(0,0,0,0.03)",
-  backgroundColor: "rgba(255,255,255,1)",
-  boxShadow: "0px 1px 5px 1px rgb(0,0,0, 0.04)",
-};
-const ProductCard = ({ productId, maxQuantity }) => {
+const ProductCard = ({
+  productId,
+  maxQuantity,
+  noProductInSectionPurchased,
+}) => {
   const { link, title, images, price, descriptions } = useParamSelector(
     productSelector,
     productId
@@ -73,6 +65,8 @@ const ProductCard = ({ productId, maxQuantity }) => {
     quantityOptions.push(i);
   }
 
+  const active = purchased || noProductInSectionPurchased;
+
   const carouselHeight = "93px";
   const carouselWidth = "116px";
 
@@ -84,8 +78,14 @@ const ProductCard = ({ productId, maxQuantity }) => {
         justifyContent: "center",
       }}
     >
-      <div style={cardStyle}>
-        <Row align="top" justify="center">
+      <div className={`product-card ${active ? "product-card-active" : ""}`}>
+        <Row
+          className={`product-card-row ${
+            active ? "product-card-row-active" : ""
+          }`}
+          align="top"
+          justify="center"
+        >
           <Col span={11}>
             <div
               style={{
@@ -285,10 +285,12 @@ const ProductCard = ({ productId, maxQuantity }) => {
 ProductCard.propTypes = {
   productId: PropTypes.string.isRequired,
   maxQuantity: PropTypes.number,
+  noProductInSectionPurchased: PropTypes.bool,
 };
 
 ProductCard.defaultProps = {
   maxQuantity: 6,
+  noProductInSectionPurchased: true,
 };
 
 export default ProductCard;

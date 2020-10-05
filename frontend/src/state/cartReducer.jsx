@@ -7,8 +7,7 @@ export const cartSlice = createSlice({
   },
   reducers: {
     addProductAction: (state, action) => {
-      const metadata = { addTime: Date.now(), quantity: 1 };
-      state.products[action.payload] = metadata;
+      state.products[action.payload] = { addTime: Date.now(), quantity: 1 };
     },
     removeProductAction: (state, action) => {
       delete state.products[action.payload];
@@ -41,6 +40,15 @@ export const productQuantitySelector = createSelector(
   productIdSelector,
   (products, productId) =>
     products[productId] ? products[productId].quantity : undefined
+);
+
+const productIdsSelector = (_, productIds) => productIds;
+
+export const cartContainsNoProductsSelector = createSelector(
+  cartProductsSelector,
+  productIdsSelector,
+  (products, productIds) =>
+    productIds.every((productId) => !(productId in products))
 );
 
 export const orderedCartSelector = createSelector(
