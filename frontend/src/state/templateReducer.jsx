@@ -41,7 +41,7 @@ export const templateSlice = createSlice({
         descriptions: [
           {
             text:
-              "Morem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+              "Morem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
             sentiment: "good",
           },
           {
@@ -71,7 +71,7 @@ export const templateSlice = createSlice({
         descriptions: [
           {
             text:
-              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
             sentiment: "good",
           },
           {
@@ -103,7 +103,7 @@ export const templateSlice = createSlice({
         descriptions: [
           {
             text:
-              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo ipsum mucius option ei, ad",
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
             sentiment: "neutral",
           },
           {
