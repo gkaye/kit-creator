@@ -3,11 +3,18 @@ import { createSelector, createSlice } from "@reduxjs/toolkit";
 export const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    products: {},
+    products: {
+      1: { addTime: 2, quantity: 1 },
+      2: { addTime: 1, quantity: 2 },
+      3: { addTime: 4, quantity: 6 },
+    },
   },
   reducers: {
     addProductAction: (state, action) => {
-      state.products[action.payload] = { addTime: Date.now(), quantity: 1 };
+      state.products[action.payload] = {
+        addTime: Date.now(),
+        quantity: 1,
+      };
     },
     removeProductAction: (state, action) => {
       delete state.products[action.payload];
@@ -53,7 +60,11 @@ export const cartContainsNoProductsSelector = createSelector(
 
 export const orderedCartSelector = createSelector(
   cartProductsSelector,
-  (products) => Object.entries(products).sort((a, b) => a.addTime - b.addTime)
+  (products) => {
+    return Object.entries(products)
+      .sort((a, b) => a[1].addTime - b[1].addTime)
+      .map((product) => product[0]);
+  }
 );
 
 export default cartSlice.reducer;

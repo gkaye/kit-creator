@@ -5,6 +5,7 @@ export const navigationSlice = createSlice({
   name: "navigation",
   initialState: {
     aboutVisible: false,
+    cartVisible: true,
     currentWizardPage: 0,
   },
   reducers: {
@@ -17,6 +18,12 @@ export const navigationSlice = createSlice({
     },
     navigateExitAboutAction: (state) => {
       state.aboutVisible = false;
+    },
+    navigateShowCartAction: (state) => {
+      state.cartVisible = true;
+    },
+    navigateHideCartAction: (state) => {
+      state.cartVisible = false;
     },
     navigateWizardAction: (state, action) => {
       state.currentWizardPage = action.payload;
@@ -33,6 +40,8 @@ export const navigationSlice = createSlice({
 export const {
   navigateToAboutAction,
   navigateExitAboutAction,
+  navigateShowCartAction,
+  navigateHideCartAction,
   navigateWizardAction,
   navigateNextWizardAction,
   navigatePreviousWizardAction,
@@ -43,6 +52,9 @@ export const {
 // in the slice file. For example: `useSelector((state) => state.navigation.value)`
 export const navigationAboutVisibleSelector = (state) =>
   state.navigation.aboutVisible;
+
+export const navigationCartVisibleSelector = (state) =>
+  state.navigation.cartVisible;
 
 export const navigationCurrentWizardPageSelector = (state) =>
   state.navigation.currentWizardPage;

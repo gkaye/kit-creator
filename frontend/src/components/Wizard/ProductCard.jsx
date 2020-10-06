@@ -1,32 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MdRemoveShoppingCart, MdShoppingCart } from "react-icons/all";
+import { MdShoppingCart } from "react-icons/all";
 import { useDispatch } from "react-redux";
-import {
-  Button,
-  Carousel,
-  Col,
-  Dropdown,
-  Menu,
-  Row,
-  Space,
-  Tooltip,
-} from "antd";
-import { DownOutlined, LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { Button, Carousel, Col, Row, Space } from "antd";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Typography from "antd/es/typography";
 import { useParamSelector } from "../../state/reducerHelpers";
 import {
   addProductAction,
   cartContainsProductSelector,
-  productQuantitySelector,
-  removeProductAction,
-  updateProductQuantityAction,
 } from "../../state/cartReducer";
 import Ratings from "./Ratings";
 import Descriptions from "./Descriptions";
 import { productSelector } from "../../state/templateReducer";
 
 import "../../App.css";
+import CartItemEditor from "../CartItemEditor";
+import Price from "../Price";
 
 const CarouselButton = ({ currentSlide, slideCount, icon, ...props }) => (
   <div {...props}>{icon}</div>
@@ -51,19 +41,6 @@ const ProductCard = ({
   );
   const dispatch = useDispatch();
   const purchased = useParamSelector(cartContainsProductSelector, productId);
-
-  const displayPriceString = price.toFixed(2).toString().split(".");
-  const displayPriceDollarsString = displayPriceString[0];
-  const displayPriceCentsString = displayPriceString[1];
-
-  // Set up quantity
-  const quantity = useParamSelector(productQuantitySelector, productId);
-
-  // Generate quantity options
-  const quantityOptions = [];
-  for (let i = 1; i <= maxQuantity; i += 1) {
-    quantityOptions.push(i);
-  }
 
   const active = purchased || noProductInSectionPurchased;
 
@@ -167,96 +144,14 @@ const ProductCard = ({
           <Col span={24}>
             <Space direction="vertical" size={4} style={{ display: "flex" }}>
               <div style={{ textAlign: "center" }}>
-                <Typography.Text
-                  style={{
-                    fontSize: "12px",
-                    position: "relative",
-                    top: "-.5em",
-                  }}
-                >
-                  $
-                </Typography.Text>
-                <Typography.Text strong style={{ fontSize: "21px" }}>
-                  {displayPriceDollarsString}
-                </Typography.Text>
-                <Typography.Text
-                  style={{
-                    fontSize: "12px",
-                    position: "relative",
-                    left: "2px",
-                    top: "-.5em",
-                  }}
-                >
-                  {displayPriceCentsString}
-                </Typography.Text>
+                <Price price={price} />
               </div>
               <div>
                 {purchased ? (
-                  <div
-                    style={{
-                      height: "23px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Dropdown
-                      overlay={
-                        <Menu
-                          onClick={({ key }) => {
-                            dispatch(
-                              updateProductQuantityAction({
-                                productId,
-                                quantity: parseInt(key, 10),
-                              })
-                            );
-                          }}
-                        >
-                          {quantityOptions.map((quantityOption) => (
-                            <Menu.Item
-                              key={quantityOption}
-                              style={{
-                                fontSize: "10px",
-                                padding: "0px 12px 0px 12px",
-                                fontWeight:
-                                  quantityOption === quantity ? 700 : 400,
-                              }}
-                            >
-                              {quantityOption}
-                            </Menu.Item>
-                          ))}
-                        </Menu>
-                      }
-                      placement="bottomCenter"
-                      trigger={["click"]}
-                    >
-                      <Button
-                        className="quantity-button"
-                        style={{ fontSize: "10px" }}
-                      >
-                        Qty: {quantity}
-                        <DownOutlined
-                          style={{
-                            fontSize: "8px",
-                            marginLeft: "4px",
-                            marginTop: "2px",
-                          }}
-                        />
-                      </Button>
-                    </Dropdown>
-                    <Tooltip
-                      placement="bottom"
-                      title="Remove from Cart"
-                      overlayStyle={{
-                        fontSize: "10px",
-                      }}
-                    >
-                      <MdRemoveShoppingCart
-                        onClick={() => dispatch(removeProductAction(productId))}
-                        className="remove-from-cart-button"
-                      />
-                    </Tooltip>
-                  </div>
+                  <CartItemEditor
+                    productId={productId}
+                    maxQuantity={maxQuantity}
+                  />
                 ) : (
                   <Button
                     className="add-to-cart-button"

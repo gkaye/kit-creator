@@ -5,6 +5,7 @@ import AboutModal from "./components/AboutModal";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import CartDrawer from "./components/CartDrawer";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       }}
     >
       <Header />
-      <AboutModal />
       <Content />
       <Footer />
+      <AboutModal />
+      <CartDrawer />
     </Layout>
   );
 }

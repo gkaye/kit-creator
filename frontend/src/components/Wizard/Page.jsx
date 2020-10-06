@@ -11,7 +11,6 @@ import Section from "./Section";
 
 const Page = ({ pageId }) => {
   const { sections } = useParamSelector(pageSelector, pageId);
-  console.log("GREG", pageId, sections);
 
   return (
     <>

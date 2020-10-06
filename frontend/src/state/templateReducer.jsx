@@ -29,7 +29,7 @@ export const templateSlice = createSlice({
     },
     products: {
       1: {
-        title: "Bulletproof Brain Octane",
+        title: "Bulletproof Brain Octane Greg Here Product",
         link:
           "https://www.amazon.com/Bulletproof-Octane-Reliable-Source-Ketogenic/dp/B00P8E0QQG/ref=as_li_ss_tl?dchild=1&keywords=bulletproof+mct&qid=1600208360&sr=8-5&linkCode=ll1&tag=ketostarterki-20&linkId=068d91961eda444d025690a933044741&language=en_US",
         images: [

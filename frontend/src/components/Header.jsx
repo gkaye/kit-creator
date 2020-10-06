@@ -2,7 +2,10 @@ import { Button, Col, Image, Layout, Row } from "antd";
 import React from "react";
 import { useDispatch } from "react-redux";
 import LogoSvg from "../logo.svg";
-import { navigateToAboutAction } from "../state/navigationReducer";
+import {
+  navigateToAboutAction,
+  navigateShowCartAction,
+} from "../state/navigationReducer";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -37,8 +40,17 @@ const Header = () => {
             id="about-button"
             size="small"
             shape="square"
-            onClick={() => dispatch(navigateToAboutAction())}
+            onClick={() => dispatch(navigateShowCartAction())}
             style={{ float: "right" }}
+          >
+            Cart
+          </Button>
+          <Button
+            id="about-button"
+            size="small"
+            shape="square"
+            onClick={() => dispatch(navigateToAboutAction())}
+            style={{ float: "right", marginRight: "5px" }}
           >
             About
           </Button>
