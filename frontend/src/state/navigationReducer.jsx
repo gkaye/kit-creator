@@ -5,7 +5,7 @@ export const navigationSlice = createSlice({
   name: "navigation",
   initialState: {
     aboutVisible: false,
-    cartVisible: true,
+    cartVisible: false,
     currentWizardPage: 0,
   },
   reducers: {

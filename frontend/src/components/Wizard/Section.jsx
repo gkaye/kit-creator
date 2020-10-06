@@ -23,7 +23,7 @@ const Section = ({ sectionId }) => {
     <Card
       style={{
         background:
-          "linear-gradient(180deg, rgba(255,255,255,1) 150px, rgba(0,0,0,0) 400px)",
+          "linear-gradient(180deg, rgba(255,255,255,1) 125px, rgba(0,0,0,0) 300px)",
         border: "none",
       }}
     >
