@@ -6,7 +6,7 @@ import { MdShoppingCart } from "react-icons/all";
 import {
   navigationCartVisibleSelector,
   navigateHideCartAction,
-} from "../state/navigationReducer";
+} from "../../state/navigationReducer";
 import CartEditor from "./CartEditor";
 
 const CartDrawer = () => {

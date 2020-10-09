@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Typography from "antd/es/typography";
-import { useParamSelector } from "../state/reducerHelpers";
-import { productSelector } from "../state/templateReducer";
+import Ellipsis from "ant-design-pro/lib/Ellipsis";
 
-import "../App.css";
+import { useParamSelector } from "../../state/reducerHelpers";
+import { productSelector } from "../../state/templateReducer";
+
+import "../../App.css";
 import CartItemEditor from "./CartItemEditor";
-import Price from "./Price";
+import Price from "../Price";
 
 const CarouselButton = ({ currentSlide, slideCount, icon, ...props }) => (
   <div {...props}>{icon}</div>
@@ -74,20 +76,26 @@ const CartProductCard = ({ productId, maxQuantity }) => {
             />
           </div>
           <div>
-            <Typography.Title
-              level={5}
-              style={{ fontSize: "13px", textAlign: "left", marginBottom: "0" }}
-              ellipsis
-            >
-              <Typography.Link
-                href={link}
-                target="_blank"
-                style={{ color: "black", whiteSpace: "pre-wrap" }}
-                ellipsis
+            <div style={{ width: "calc(100%)" }}>
+              <Typography.Title
+                level={5}
+                style={{
+                  fontSize: "13px",
+                  textAlign: "left",
+                  marginBottom: "0",
+                }}
               >
-                {title}
-              </Typography.Link>
-            </Typography.Title>
+                <Typography.Link
+                  href={link}
+                  target="_blank"
+                  style={{ color: "black", whiteSpace: "pre-wrap" }}
+                >
+                  <Ellipsis length={45} tooltip>
+                    {title}
+                  </Ellipsis>
+                </Typography.Link>
+              </Typography.Title>
+            </div>
             <div style={{ textAlign: "left" }}>
               <Price price={price} fontSize={17} />
             </div>

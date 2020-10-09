@@ -4,7 +4,7 @@ import { Button, Col, Row, Space, Steps } from "antd";
 import PropTypes from "prop-types";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RightOutlined } from "@ant-design/icons";
+import { RightOutlined, FlagTwoTone } from "@ant-design/icons";
 import { MdShoppingCart } from "react-icons/all";
 import {
   navigateNextWizardAction,
@@ -15,6 +15,7 @@ import {
 import { useParamSelector } from "../../state/reducerHelpers";
 import { allPagesSelector, kitSelector } from "../../state/templateReducer";
 import Page from "./Page";
+import CartCheckoutSection from "../Cart/CartCheckoutSection";
 
 const Kit = ({ kitId }) => {
   const { pages } = useParamSelector(kitSelector, kitId);
@@ -34,7 +35,13 @@ const Kit = ({ kitId }) => {
         }}
       >
         <Row justify="center" align="top">
-          <Col span={24} style={{ paddingTop: "20px", paddingBottom: "10px" }}>
+          <Col
+            span={24}
+            style={{
+              paddingTop: "20px",
+              paddingBottom: "10px",
+            }}
+          >
             <Steps
               current={currentPage}
               size="small"
@@ -44,6 +51,7 @@ const Kit = ({ kitId }) => {
               style={{
                 background: "#ffffff",
                 padding: "10px 20px",
+                borderRadius: "10px",
               }}
             >
               {deepPages.map((page, i) => (
@@ -78,20 +86,38 @@ const Kit = ({ kitId }) => {
                   key={i}
                 />
               ))}
+              <Steps.Step
+                title="Checkout"
+                icon={
+                  <FlagTwoTone
+                    twoToneColor={
+                      currentPage >= pages.length ? "#1890ff" : "#cccccc"
+                    }
+                    style={{ opacity: "75%" }}
+                  />
+                }
+                key="checkout"
+              />
             </Steps>
           </Col>
-          <Col span={24}>
-            <Page pageId={pages[currentPage]} />
-          </Col>
+          {currentPage >= pages.length ? (
+            <CartCheckoutSection />
+          ) : (
+            <>
+              <Col span={24}>
+                <Page pageId={pages[currentPage]} />
+              </Col>
+            </>
+          )}
           <Col span={24} align="right">
             <Space>
-              {currentPage > 0 && (
+              {currentPage > 0 && currentPage < pages.length && (
                 <Button
                   size="small"
                   shape="square"
                   onClick={() => dispatch(navigatePreviousWizardAction())}
                 >
-                  Previous
+                  Back
                 </Button>
               )}
               {currentPage < pages.length - 1 && (
@@ -101,6 +127,15 @@ const Kit = ({ kitId }) => {
                   onClick={() => dispatch(navigateNextWizardAction())}
                 >
                   Next
+                </Button>
+              )}
+              {currentPage === pages.length - 1 && (
+                <Button
+                  size="small"
+                  shape="square"
+                  onClick={() => dispatch(navigateNextWizardAction())}
+                >
+                  Checkout
                 </Button>
               )}
             </Space>

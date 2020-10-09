@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Button, Carousel, Col, Row, Space } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Typography from "antd/es/typography";
+import Ellipsis from "ant-design-pro/lib/Ellipsis";
 import { useParamSelector } from "../../state/reducerHelpers";
 import {
   addProductAction,
@@ -15,7 +16,7 @@ import Descriptions from "./Descriptions";
 import { productSelector } from "../../state/templateReducer";
 
 import "../../App.css";
-import CartItemEditor from "../CartItemEditor";
+import CartItemEditor from "../Cart/CartItemEditor";
 import Price from "../Price";
 
 const CarouselButton = ({ currentSlide, slideCount, icon, ...props }) => (
@@ -68,6 +69,7 @@ const ProductCard = ({
               style={{
                 display: "flex",
                 justifyContent: "center",
+                marginLeft: "10px",
                 marginRight: "10px",
               }}
             >
@@ -120,14 +122,15 @@ const ProductCard = ({
             <Typography.Title
               level={5}
               style={{ fontSize: "15px", textAlign: "left" }}
-              ellipsis
             >
               <Typography.Link
                 href={link}
                 target="_blank"
                 style={{ color: "black" }}
               >
-                {title}
+                <Ellipsis length={26} tooltip>
+                  {title}
+                </Ellipsis>
               </Typography.Link>
             </Typography.Title>
             <Ratings

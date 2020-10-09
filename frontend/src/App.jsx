@@ -5,7 +5,7 @@ import AboutModal from "./components/AboutModal";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import CartDrawer from "./components/CartDrawer";
+import CartDrawer from "./components/Cart/CartDrawer";
 
 function App() {
   return (

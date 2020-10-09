@@ -9,8 +9,8 @@ import {
   productQuantitySelector,
   removeProductAction,
   updateProductQuantityAction,
-} from "../state/cartReducer";
-import { useParamSelector } from "../state/reducerHelpers";
+} from "../../state/cartReducer";
+import { useParamSelector } from "../../state/reducerHelpers";
 
 const CartItemEditor = ({ productId, maxQuantity, justifyContent }) => {
   const dispatch = useDispatch();

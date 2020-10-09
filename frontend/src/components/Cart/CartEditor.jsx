@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Col, Divider, Row } from "antd";
 
-import { orderedCartSelector } from "../state/cartReducer";
+import { orderedCartSelector } from "../../state/cartReducer";
 import CartProductCard from "./CartProductCard";
 
 const CartEditor = () => {

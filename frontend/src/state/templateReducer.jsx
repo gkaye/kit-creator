@@ -8,10 +8,10 @@ export const templateSlice = createSlice({
       1: { title: "Keto Starter Kit", pages: ["1", "2", "3", "4", "5"] },
     },
     pages: {
-      1: { title: "Beverages", sections: ["1", "2"] },
-      2: { title: "Snacks", sections: ["1"] },
-      3: { title: "P3", sections: ["1"] },
-      4: { title: "P4", sections: ["1"] },
+      1: { title: "Beverages", sections: ["1"] },
+      2: { title: "Snacks", sections: ["1", "3", "4"] },
+      3: { title: "P3", sections: ["3"] },
+      4: { title: "P4", sections: ["4"] },
       5: { title: "P5", sections: ["1"] },
     },
     sections: {
@@ -25,6 +25,16 @@ export const templateSlice = createSlice({
         title: "Title 2",
         description: "description 2",
         products: ["3", "1", "3"],
+      },
+      3: {
+        title: "Title 3",
+        description: "description 3",
+        products: ["4", "5"],
+      },
+      4: {
+        title: "Title 4",
+        description: "description 4",
+        products: ["6", "7", "8", "9"],
       },
     },
     products: {
@@ -95,6 +105,198 @@ export const templateSlice = createSlice({
         images: [
           "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
           "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      4: {
+        title: "Microwave Bacon Cooker",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      5: {
+        title: "Black and Decker Spatula",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      6: {
+        title: "Bacon Cooker Two",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      7: {
+        title: "Bacon Cooker Three",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      8: {
+        title: "Bacon Dehydrator",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+        ],
+        price: 120.25,
+        descriptions: [
+          {
+            text:
+              "Lorem ipsum dolor sit amet, amet nihil consetetur cu mel. Quo am ipsum mucius option ei, ad",
+            sentiment: "neutral",
+          },
+          {
+            text: "mucius option",
+            sentiment: "neutral",
+          },
+          {
+            text:
+              "Quo ipsum mucius option ei, ad sed facilis ancillae forensibus",
+            sentiment: "neutral",
+          },
+          {
+            text: "Mutat sensibus vim ex",
+            sentiment: "neutral",
+          },
+        ],
+      },
+      9: {
+        title: "Amazon Basics Bacon Defroster",
+        link: "https://google.com",
+        images: [
+          "https://images-na.ssl-images-amazon.com/images/I/71GQFw5JrgL._AC_SL1500_.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
           "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
           "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",
           "https://images-na.ssl-images-amazon.com/images/I/71dg3kXPdbL._AC_SL1500_.jpg",

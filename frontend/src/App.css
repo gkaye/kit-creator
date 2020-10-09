@@ -73,12 +73,13 @@
   border-top-width: 1px;
   border-top-color: rgba(0,0,0,0.0);
   background-color: rgba(255,255,255,1);
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.04);
+  border-radius: 15px;
 }
 
 .product-card-active, .product-card:hover {
-  border-top-color: rgba(0,0,0,0.03);
+  border-top-color: rgba(0,0,0,0.025);
   background-color: rgba(255,255,255,1);
-  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.04);
 }
 
 .add-to-cart-button, .add-to-cart-button:hover, .add-to-cart-button:focus {
@@ -99,6 +100,29 @@
 }
 
 .add-to-cart-button:hover {
+  background-color: #F7CA00;
+  border-color: #F2C200;
+}
+
+.amazon-checkout-button, .amazon-checkout-button:hover, .amazon-checkout-button:focus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 1px 0;
+  font-size: 14px;
+  font-weight: 500;
+  width: 210px;
+  height: 32px;
+  background-color: #FFD814;
+  border-color: #D5D9D9;
+  color: #000000;
+  border-radius: 20px;
+  border-width: 1px;
+  box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+}
+
+.amazon-checkout-button:hover {
   background-color: #F7CA00;
   border-color: #F2C200;
 }
