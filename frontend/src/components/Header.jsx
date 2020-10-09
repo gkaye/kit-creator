@@ -1,61 +1,58 @@
-import { Button, Col, Image, Layout, Row } from "antd";
 import React from "react";
+import { Button, Image, Layout } from "antd";
+import { MdShoppingCart } from "react-icons/all";
 import { useDispatch } from "react-redux";
+import "../App.css";
 import LogoSvg from "../logo.svg";
-import {
-  navigateToAboutAction,
-  navigateShowCartAction,
-} from "../state/navigationReducer";
+import { navigateShowCartAction } from "../state/navigationReducer";
 
 const Header = () => {
   const dispatch = useDispatch();
   return (
     <Layout.Header
       style={{
-        padding: "0 0 0 0",
+        marginTop: "20px",
         background: "#f9fafa",
         height: "fit-content",
         lineHeight: "unset",
+        textAlign: "center",
       }}
     >
-      <Row justify="space-between" align="middle">
-        <Col span={12}>
+      <div
+        style={{
+          maxWidth: "1380px",
+          minWidth: "400px",
+          margin: "auto",
+        }}
+      >
+        <div>
           <Image
             id="logo"
             src={LogoSvg}
             preview={false}
             style={{
               float: "left",
-              margin: "15px 0px 15px 15px",
+              marginLeft: "15px",
             }}
           />
-        </Col>
-        <Col
-          span={4}
+        </div>
+        <div
           style={{
-            margin: "15px 15px 15px 0px",
+            float: "right",
+            marginRight: "15px",
           }}
         >
           <Button
-            id="about-button"
-            size="small"
-            shape="square"
+            className="open-cart-button"
             onClick={() => dispatch(navigateShowCartAction())}
-            style={{ float: "right" }}
+            icon={
+              <MdShoppingCart style={{ position: "relative", right: "5px" }} />
+            }
           >
             Cart
           </Button>
-          <Button
-            id="about-button"
-            size="small"
-            shape="square"
-            onClick={() => dispatch(navigateToAboutAction())}
-            style={{ float: "right", marginRight: "5px" }}
-          >
-            About
-          </Button>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Layout.Header>
   );
 };

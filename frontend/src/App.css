@@ -104,6 +104,28 @@
   border-color: #F2C200;
 }
 
+.open-cart-button, .open-cart-button:hover, .open-cart-button:focus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 1px 0;
+  font-size: 13px;
+  width: 75px;
+  height: 30px;
+  background-color: #ffe149;
+  border-color: #FFD814;
+  color: #000000;
+  border-radius: 10px 10px 10px 30px;
+  border-width: 1px;
+  box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+}
+
+.open-cart-button:hover {
+  background-color: #F7CA00;
+  border-color: #F2C200;
+}
+
 .amazon-checkout-button, .amazon-checkout-button:hover, .amazon-checkout-button:focus {
   display: flex;
   justify-content: center;
@@ -158,4 +180,11 @@
 .quantity-button:hover {
   background-color: #F7CA00;
   border-color: #F2C200;
+}
+
+#footer-text {
+  opacity: 0.5;
+}
+#footer-text:hover {
+  opacity: 1;
 }

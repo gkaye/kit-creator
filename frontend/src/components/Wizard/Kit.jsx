@@ -38,7 +38,7 @@ const Kit = ({ kitId }) => {
           <Col
             span={24}
             style={{
-              paddingTop: "20px",
+              paddingTop: "25px",
               paddingBottom: "10px",
             }}
           >

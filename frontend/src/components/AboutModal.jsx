@@ -57,8 +57,8 @@ const AboutModal = () => {
             strong
             style={{ fontStyle: "italic", color: "rgb(0, 0, 0, 0.8)" }}
           >
-            Hey! I&apos;m Greg Kaye, founder of Keto Starter Kit. Feel free to
-            reach out to me with comments or questions!
+            Hey! I&apos;m Greg Kaye, founder of Kit Creator. Feel free to reach
+            out to me with comments or questions!
           </Typography.Text>
 
           <div style={{ textAlign: "center" }}>
@@ -86,7 +86,7 @@ const AboutModal = () => {
                 onClick={() => {
                   window.open(
                     "https://www.linkedin.com/in/greg-kaye/",
-                    "_blank",
+                    "_blank"
                   );
                 }}
               />
