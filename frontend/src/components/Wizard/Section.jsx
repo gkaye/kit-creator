@@ -34,7 +34,7 @@ const Section = ({ sectionId }) => {
         title={title}
         description={description}
       />
-      <Row justify={products.length > 3 ? "start" : "center"} align="top">
+      <Row justify={products.length >= 3 ? "start" : "center"} align="top">
         {products.map((product) => (
           <Col xl={8} lg={12} sm={24}>
             <ProductCard
