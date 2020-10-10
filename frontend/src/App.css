@@ -126,6 +126,60 @@
   border-color: #F2C200;
 }
 
+.back-button, .back-button:hover, .back-button:focus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 1px 0;
+  font-size: 13px;
+  width: 35px;
+  height: 30px;
+  background-color: #ffe149;
+  border-width: 0;
+  color: rgba(0,0,0,0.4);
+  border-radius: 30px 0 0 30px;
+}
+
+.back-button:hover {
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+  background-color: #F7CA00;
+  border-color: #ffe149;
+}
+
+.back-button:disabled, .back-button:disabled:hover  {
+  background-color: #ffe149;
+  border-color: #ffe149;
+  color: rgba(0,0,0,0.2);
+}
+.back-button:disabled:hover {
+  color: rgba(0,0,0,0.05);
+}
+
+.continue-button, .continue-button:hover, .continue-button:focus {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 1px 0;
+  font-size: 13px;
+  font-weight: 500;
+  width: 145px;
+  height: 30px;
+  background-color: #ffe149;
+  border-color: #ffe149;
+  border-left-style: none;
+  color: #000000;
+  border-radius: 0 30px 30px 0;
+  border-width: 1px;
+}
+
+.continue-button:hover {
+  background-color: #F7CA00;
+  border-color: #F2C200;
+}
+
 .amazon-checkout-button, .amazon-checkout-button:hover, .amazon-checkout-button:focus {
   display: flex;
   justify-content: center;

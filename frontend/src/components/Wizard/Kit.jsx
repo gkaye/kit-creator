@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RightOutlined, FlagTwoTone } from "@ant-design/icons";
-import { MdShoppingCart } from "react-icons/all";
+import { MdShoppingCart, MdKeyboardBackspace } from "react-icons/all";
 import {
   navigateNextWizardAction,
   navigatePreviousWizardAction,
@@ -109,30 +109,31 @@ const Kit = ({ kitId }) => {
               </Col>
             </>
           )}
-          <Col span={24} align="right">
-            <Space>
-              {currentPage > 0 && currentPage < pages.length && (
+          <Col span={24} align="center">
+            <Space size={2}>
+              {currentPage <= pages.length - 1 && (
                 <Button
-                  size="small"
-                  shape="square"
+                  className="back-button"
+                  icon={
+                    <MdKeyboardBackspace
+                      style={{ fontSize: "14px", marginTop: "1px" }}
+                    />
+                  }
+                  disabled={currentPage === 0}
                   onClick={() => dispatch(navigatePreviousWizardAction())}
-                >
-                  Back
-                </Button>
+                />
               )}
               {currentPage < pages.length - 1 && (
                 <Button
-                  size="small"
-                  shape="square"
+                  className="continue-button"
                   onClick={() => dispatch(navigateNextWizardAction())}
                 >
-                  Next
+                  Continue
                 </Button>
               )}
               {currentPage === pages.length - 1 && (
                 <Button
-                  size="small"
-                  shape="square"
+                  className="continue-button"
                   onClick={() => dispatch(navigateNextWizardAction())}
                 >
                   Checkout

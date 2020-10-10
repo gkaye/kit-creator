@@ -12,6 +12,7 @@ const Header = () => {
     <Layout.Header
       style={{
         marginTop: "20px",
+        padding: "0",
         background: "#f9fafa",
         height: "fit-content",
         lineHeight: "unset",
