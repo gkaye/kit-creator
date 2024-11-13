@@ -2,7 +2,6 @@
 
 **Kit Creator** is a tool that lets users build a curated "kit" of recommended products, ideal for a specific task, hobby, or project. By linking to products on Amazon, users can collect affiliate revenue for each purchase made through their recommendations.
 
----
 
 ## Features
 
@@ -10,7 +9,6 @@
 - **Amazon Affiliate Integration**: Generate affiliate links seamlessly, allowing users to earn revenue when others purchase items through their kit.
 - **Easy Kit Sharing**: Kits can be shared easily with friends, family, or followers.
 
----
 
 ## Screenshots
 
